@@ -6,6 +6,20 @@ class GzRender{			/* define a renderer */
   
 
 public:
+
+	/* put some bounds on size in case of error */
+	#define	MAXXRES	1024	
+	#define	MAXYRES	1024
+
+	/* define general display pixel-type */
+	typedef	struct {
+		GzIntensity    red;
+		GzIntensity    green;
+		GzIntensity    blue;
+		GzIntensity    alpha;
+		GzDepth        z;
+	} GzPixel;
+
 	// Attributes
 	unsigned short	xres;			/* frame resolution */
 	unsigned short	yres;
